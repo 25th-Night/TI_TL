@@ -1,0 +1,19 @@
+.todo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.card {
+    height: 50px;
+}
+
+div.card-body.d-flex {
+    margin-left: 10px;
+    padding: 0;
+}
+
+button.btn.btn-danger {
+    font-size: 15px;
+    margin: 7px 10px;
+}
