@@ -39,16 +39,40 @@ function createTodo() {
     input.value = "";
 }
 
+var createBtn = document.getElementById("button-addon");
+createBtn.addEventListener("click", createTodo);
+
 
 function readTodo() {
     var existingData = localStorage.getItem("card");
-    var inputList = existingData.split(",");
-    console.log(inputList);
-    inputList.forEach((inputData) => {
-        gridTodo(inputData)
-    })
+    if (existingData) {
+        var inputList = existingData.split(",");
+        inputList.forEach((inputData) => {
+            gridTodo(inputData)
+        })
+    }
 }
 
+function deleteTodo(event) {
+    var deleteBtn = event.target;
+    var card = deleteBtn.closest('.card');
 
-var createBtn = document.getElementById("button-addon");
-createBtn.addEventListener("click", createTodo);
+    var cardIndex = [...section.children].indexOf(card);
+    console.log(cardIndex);
+
+    var existingData = localStorage.getItem("card");
+    if (existingData) {
+        var inputList = existingData.split(",");
+        inputList.splice(inputList.length-1-cardIndex, 1);
+        existingData = inputList.join(",");
+        localStorage.setItem("card", existingData);
+    }
+    
+    card.remove();
+}
+
+section.addEventListener("click", function(event) {
+    if (event.target.classList.contains("btn-danger")) {
+        deleteTodo(event);
+    }
+});
