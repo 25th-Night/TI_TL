@@ -1,3 +1,16 @@
+:root {
+    --logo-color: #437ABD;
+}
+
+body {
+    font-family: Montserrat;
+}
+
+body > header > div > i {
+    color: var(--logo-color);
+    margin-right: 5px;
+}
+
 .todo {
     white-space: nowrap;
     overflow: hidden;
