@@ -7,7 +7,7 @@ headerTitle.addEventListener("click", () => {
     window.location.href = "/"
 })
 
-var section = document.querySelector('.card-list');
+var section = document.querySelector('section');
 
 function renderTodo(content) {
     var card = document.createElement("div");
@@ -29,7 +29,7 @@ function renderTodo(content) {
 
 
 function createTodo() {
-    var input = document.querySelector(".form-control");
+    var input = document.querySelector("input");
     var inputData = input.value;
 
     if (inputData.trim() == "") {
