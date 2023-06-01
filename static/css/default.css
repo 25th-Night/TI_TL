@@ -11,7 +11,11 @@ body > header > div > i {
     margin-right: 5px;
 }
 
-.todo {
+div.header-title {
+    cursor: pointer;
+}
+
+div.todo {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

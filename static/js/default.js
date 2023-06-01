@@ -2,9 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
     readTodo();
 });
 
+var headerTitle = document.querySelector(".header-title");
+headerTitle.addEventListener("click", () => {
+    window.location.href = "/"
+})
+
 var section = document.querySelector('.card-list');
 
-function gridTodo(content) {
+function renderTodo(content) {
     var card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `<div class="card-body d-flex justify-content-between align-items-center">
@@ -32,7 +37,7 @@ function createTodo() {
         return;
     }
 
-    var card = gridTodo(inputData);
+    var card = renderTodo(inputData);
 
     section.insertBefore(card, section.firstChild);
 
@@ -54,7 +59,7 @@ function readTodo() {
     if (existingData) {
         var inputList = existingData.split(",");
         inputList.forEach((inputData) => {
-            gridTodo(inputData)
+            renderTodo(inputData)
         })
     }
 }
@@ -65,12 +70,11 @@ function deleteTodo(event) {
     var card = deleteBtn.closest('.card');
 
     var cardIndex = [...section.children].indexOf(card);
-    console.log(cardIndex);
 
     var existingData = localStorage.getItem("card");
     if (existingData) {
         var inputList = existingData.split(",");
-        inputList.splice(inputList.length-1-cardIndex, 1);
+        inputList.splice(-cardIndex-1, 1);
         existingData = inputList.join(",");
         localStorage.setItem("card", existingData);
     }
