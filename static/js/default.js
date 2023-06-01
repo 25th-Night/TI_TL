@@ -22,9 +22,15 @@ function gridTodo(content) {
     return card;
 }
 
+
 function createTodo() {
     var input = document.querySelector(".form-control");
     var inputData = input.value;
+
+    if (inputData.trim() == "") {
+        alert("빈 값은 입력할 수 없습니다. 다시 확인해주세요.")
+        return;
+    }
 
     var card = gridTodo(inputData);
 
@@ -52,6 +58,7 @@ function readTodo() {
         })
     }
 }
+
 
 function deleteTodo(event) {
     var deleteBtn = event.target;
