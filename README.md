@@ -25,7 +25,7 @@
 - HTML: 웹 페이지 및 내용을 구조화
 - CSS : 웹 페이지를 디자인
 - Javascript : 웹 페이지를 동적으로 제어
-- Python : 간단한 서버 실행
+- Python : `http.server`를 이용한 간단한 서버 실행
 
 <br>
 
@@ -82,7 +82,7 @@
     - [**구글 웹폰트 사용법 (Google Fonts)**](https://www.daleseo.com/css-web-fonts/)
     - [**웹 아이콘 폰트어썸 (FontAwesome) 사용 방법 (2022년 버전)**](https://rgy0409.tistory.com/4762)
     
-    ```jsx
+    ```html
     <!DOCTYPE html>
     <html lang="ko">
     <head>
