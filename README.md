@@ -565,3 +565,8 @@ section.addEventListener("click", function(event) {
 | 03. 데이터 생성 | 04. 데이터 삭제 | 
 | --- | --- |
 | ![녹화_2023_06_01_22_27_38_252](https://github.com/25th-Night/TI_TL/assets/104040502/b3adc266-f882-47c3-bd65-5d52e11b3f8f) | ![녹화_2023_06_01_22_27_55_796](https://github.com/25th-Night/TI_TL/assets/104040502/773e426f-55b8-4e68-9f0c-af95a1092c98) |
+
+
+| 05. 툴팁 | 06. - | 
+| --- | --- |
+| ![05  툴팁](https://github.com/25th-Night/TI_TL/assets/104040502/1577e2b1-9933-44a2-949d-53c9215e9752) | ![06  empty](https://github.com/25th-Night/TI_TL/assets/104040502/068943e1-eaec-41a9-a773-3b1df4f89eac) |
